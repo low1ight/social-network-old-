@@ -1,0 +1,64 @@
+.wrapper {
+    display: grid;
+
+    grid-template-areas: 'img name name'
+                         'img stat stat'
+                         'img btn btn';
+    grid-template-columns: 90px 2fr 2fr;
+    background-color: #fff;
+
+}
+/* STATUS/NAME ----------------- */
+
+.statusDiv,.nameDiv {
+    text-align: start;
+    height: 20px;
+
+}
+.statusDiv {
+    grid-area: stat;
+    opacity: 0.5;
+    font-size: 0.7em;
+    color: #656565;
+}
+.nameDiv {
+    grid-area: name;
+    width: max-content;
+    color: #4264A8;
+}
+.nameDiv:hover {
+    text-decoration: underline #4264A8;
+
+}
+
+/* IMG -------------------------*/
+
+.imgDiv {
+    grid-area: img;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgDiv img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+/* BUTTONS -------------------------*/
+
+.buttonDiv {
+    grid-area: btn;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: start;
+}
+.buttonDiv > button {
+    width: 40%;
+
+}
+

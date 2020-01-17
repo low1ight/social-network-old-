@@ -1,0 +1,12 @@
+.button {
+    height: 2em;
+    width: 50%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button img {
+    height: 50%;
+    width: 80%;
+}

@@ -1,0 +1,17 @@
+.messagesWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.messagesWrapper > * {
+    margin: 0 0.5em;
+}
+.messagesWrapper.withScrollBar > * {
+    margin: 0 0.5em 0 1em;
+}

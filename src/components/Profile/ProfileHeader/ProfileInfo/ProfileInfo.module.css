@@ -1,0 +1,131 @@
+/*main data*/
+.info, .wrapper, .mainData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    height: max-content;
+    background-color: #FFF;
+}
+
+.info.active {
+    height: auto;
+}
+
+.wrapper {
+    width: 98%;
+    height: calc(98% - 45px);
+    margin: auto;
+}
+
+.mainData {
+    height: 3em;
+}
+
+.mainData > div > div > :first-child { /*NAME*/
+    font-size: 1.3em;
+    font-weight: 500;
+    color: black;
+}
+
+.mainData > div > div > :last-child { /*STATUS*/
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.lookingForJobText {
+    font-size: 0.8em;
+}
+
+.mainData > :first-child > div > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.mainData > :first-child > img {
+    display: none;
+}
+
+.mainData > :first-child > img {
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+}
+
+
+.infoItem > :first-child {
+    position: relative;
+    top: 0.5em;
+    font-size: 0.9em;
+    padding-right: 0.5em;
+    background-color: white;
+
+}
+
+.infoItem > :last-child {
+    padding: 1em 0 0 1em;
+    font-size: 0.8em;
+    color: #A18282;
+    border-top: 1px solid rgba(221, 223, 226, 1);
+}
+
+.restData {
+    height: calc(100% - 3em);
+    margin: 0.5em 0;
+}
+
+/*info block extension button -----------------------*/
+.infoHeightToggle {
+    padding: 0.3em 0;
+    border-top: 1px solid rgba(221, 223, 226, 1);
+}
+
+.infoHeightToggle:hover {
+    background-color: #F2F4F6;
+    cursor: pointer;
+}
+
+.infoHeightToggle p {
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-left: 0.5em;
+}
+.mobileButtons {
+    display: none;
+}
+/*media---------------------------------------*/
+@media screen and (max-width: 825px ) {
+    .infoHeightToggle,.infoHeightToggle:hover {
+        background-color: #E6EBF1;
+    }
+
+    .mainData {
+        height: 4em;
+    }
+    .mainData > :first-child {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+    }
+    .wrapper {
+        width: 95%;
+    }
+    .info  {
+        padding-top: 0.7em;
+        height: max-content;
+    }
+    .mainData > :first-child > img {
+        display: block;
+        justify-self: left;
+        align-self: center;
+    }
+    .mobileButtons  {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em 0 1em 0;
+    }
+
+}

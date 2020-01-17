@@ -1,0 +1,9 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+}
+.spinner {
+    margin: auto;
+    width: 10%;
+    height: 10%;
+}

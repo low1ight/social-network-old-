@@ -1,0 +1,22 @@
+.profileTop {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 'photo info';
+    grid-template-columns: 250px minmax(5em,1fr);
+}
+.profileTop >:last-child {
+    grid-area: info;
+}
+.profileTop >:first-child {
+    grid-area:photo;
+}
+@media screen and (max-width: 825px ) {
+    .profileTop {
+        grid-template-areas: 'info';
+        grid-template-columns: 1fr;
+    }
+    .profileTop >:first-child {
+        display: none;
+
+    }
+}

@@ -1,0 +1,55 @@
+.inputText, .textarea, .messageArea {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #caced4;
+    display: block;
+}
+
+.inputText, .textarea {
+    border-radius: 4px;
+}
+.error > :first-child {
+    background: url('../../../assets/images/inputErrorIcon.png') no-repeat center right 0.5em;
+    background-size: 1.5em;
+    padding-right: 2.5em;
+    border: 1px solid red;
+}
+.error {
+    position: relative;
+}
+
+
+
+.error > :last-child {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-weight: bold;
+    color: darkred;
+    font-size: 1em;
+}
+.messageArea {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+    border: 2px solid rgba(221, 223, 226, 1);
+}
+
+.textarea, .messageArea {
+    resize: none;
+    overflow: hidden;
+}
+
+.inputText:focus,.textarea:focus,.messageArea:focus {
+    outline: none;
+}
+
+.inputText:focus::placeholder,.textarea:focus::placeholder,.messageArea:focus::placeholder  {
+    opacity: 0.5;
+}
+
+

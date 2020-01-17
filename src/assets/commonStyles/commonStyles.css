@@ -1,0 +1,156 @@
+/*MAIN STYLE-----------------------------*/
+.block,.errorStyle {
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 2px rgba(221,223,226,1);
+
+
+}
+
+.errorStyle {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1em;
+    background-color: red;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.customHr {
+    border-top: 1px solid rgba(221, 223, 226, 1);
+}
+
+/*BUTTON STYLE----------------------------*/
+.buttonStyle,.customButtonStyle {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+}
+.buttonStyle:active > *,.customButtonStyle:active > * {
+    position: relative;
+    top:1px
+}
+
+/*main button ----------*/
+
+.buttonStyle {
+    background-color: #5281B9;
+}
+.buttonStyle:hover {
+    background-color: #5B89BD;
+    cursor: pointer;
+}
+.buttonStyle:active {
+    background-color: #4872A3;
+}
+.buttonStyle:disabled {
+    background-color: #67a2e1;
+}
+/*custom button style -------*/
+.customButtonStyle {
+    background-color: #E6EBF1;
+}
+.customButtonStyle:hover {
+    background-color: #E1E6EC;
+    cursor: pointer;
+}
+.customButtonStyle:active {
+    background-color: #DAE2EA;
+}
+/* invisible button ------------*/
+.invisibleButton {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+/*CHECKBOX STYLE-------------------------------*/
+.checkboxStyle {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.checkboxStyle input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkboxStyle_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 1px 1px rgba(202,206,212,1);
+}
+.checkboxStyle:hover input ~ .checkboxStyle_indicator,
+.checkboxStyle input:focus ~ .checkboxStyle_indicator {
+    background: #cccccc;
+}
+
+.checkboxStyle input:checked ~ .checkboxStyle_indicator {
+    background: #5B89BD;
+}
+.checkboxStyle:hover input:not([disabled]):checked ~ .checkboxStyle_indicator,
+.checkboxStyle input:checked:focus ~ .checkboxStyle_indicator {
+    background: #629fd9;
+}
+.checkboxStyle input:disabled ~ .checkboxStyle_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.checkboxStyle_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.checkboxStyle input:checked ~ .checkboxStyle_indicator:after {
+    display: block;
+}
+.checkboxStyle-checkbox .checkboxStyle_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.checkboxStyle-checkbox input:disabled ~ .checkboxStyle_indicator:after {
+    border-color: #7b7b7b;
+}
+
+/*other --------------------------------------*/
+/*custom block message*/
+.blockMessage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blockMessage p {
+    font-size: 0.9em;
+    font-weight: bold;
+    opacity: 0.7;
+}
+/*media-----------------------------------*/
+@media screen and (max-width: 825px ) {
+    .block {
+        box-shadow: 0px 0px 0px 1px rgba(221,223,226,1);
+    }
+}

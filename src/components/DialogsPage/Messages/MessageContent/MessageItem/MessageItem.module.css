@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    padding: 0.2em 0;
+
+}
+.wrapper.withScrollbar {
+    margin: 0 0.5em 0 1em;
+}
+.messageWrapper {
+    padding: 0.5em;
+    max-width: 70%;
+    height: 100%;
+    font-size: 0.8em;
+    font-weight: bold;
+    word-wrap: break-word;
+    position: relative;
+    border-radius: .4em;
+}
+.wrapper.unreadMessage {
+    background-color: #EDF0F5;
+}
+.messageWrapper >:first-child {  /*USER NAME*/
+    color: #42648B;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.messageWrapper >:first-child:hover {
+    border-bottom: solid #42648B 2px;
+    transition: .1s ;
+}
+
+.wrapper.myMessage {
+    justify-content: flex-end;
+}
+.wrapper.friendMessage {
+    justify-content: flex-start;
+}
+.myMessage .messageWrapper {
+    background-color: #EFFDDE;
+    margin-right: 0.5em;
+}
+.friendMessage .messageWrapper {
+    background-color: #EDEEF0;
+    margin-left: 0.5em;
+}
+
+.messageWrapper:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 0;
+    margin-top: -2.5px;
+}
+.myMessage .messageWrapper:after {
+    right: 0;
+    border-left-color:#EFFDDE;
+    border-right: 0;
+    margin-right: -5px;
+}
+.friendMessage .messageWrapper:after {
+    left: 0;
+    border-right-color:#EDEEF0;
+    border-left: 0;
+    margin-left: -5px;
+}

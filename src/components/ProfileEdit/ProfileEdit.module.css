@@ -1,0 +1,64 @@
+.wrapper {
+    background-color: #FFFFFF;
+    height: 100%;
+}
+
+.formWrapper {
+
+}
+
+.mainData > :nth-child(3) { /*check-box*/
+    margin-top: 0.7em;
+}
+
+.mainData, .contactsData {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+.mainData > div {
+    padding-top: 1em;
+}
+
+.contactsData > div {
+    padding-top: 0.5em;
+}
+
+b {
+    color: #656565;
+}
+
+.tab, .tabHeader {
+    border-bottom: 1px solid rgba(221, 223, 226, 1);
+    box-shadow: 0 1px 4px rgba(221, 223, 226, 1);
+}
+
+.tab {
+    border-top: 1px solid rgba(221, 223, 226, 1);
+    box-shadow: 0 1px 4px rgba(221, 223, 226, 1),
+    0 -1px 4px rgba(221, 223, 226, 1);
+}
+
+.tab, .tabHeader > p {
+    padding: 1.5em 0 1.5em 1em;
+    font-size: 0.8em;
+    font-weight: 600;
+
+}
+
+.button {
+    display: flex;
+}
+
+.button button {
+    width: 100%;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 825px ) {
+    .mainData, .contactsData {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,97 @@
+.wrapper {
+    font-size: 2em;
+    color: white;
+    overflow-y:auto ;
+}
+
+.wrapper.hidden {
+    color: #EDEEF0;
+}
+
+.wrapper.hidden .menu {
+    display: none;
+}
+
+.menu {
+    top: 100%;
+    left: 0;
+    position: absolute;
+    height: calc(100vh - 100%);
+    width: 100%;
+}
+
+.nav { /*nav*/
+    position: fixed;
+    background-color: #EDEEF0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+/*go to profile item---------------------------------------*/
+.myProfile {
+    background-color: #FFFFFF;
+
+}
+
+.myProfile > div {
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    color: #4A76A8;
+    grid-template-areas: 'img name arrow' 'img text arrow';
+    grid-template-columns: 50px 2fr 2fr;
+}
+
+.myProfile > div img, .myProfile > div > :last-child {
+    align-self: center;
+}
+
+.myProfile > div img {
+    grid-area: img;
+    justify-self: left;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+}
+
+.myProfile > div p {
+    grid-area: name;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    color: black;
+    align-self: end;
+    font-weight: 600;
+}
+
+.myProfile > div span {
+    font-size: 13px;
+    text-overflow: ellipsis;
+    grid-area: text;
+    color: #909499;
+}
+
+.myProfile > div > :last-child {
+    justify-self: right;
+    grid-area: arrow;
+    font-size: 0.5em;
+    color: #909499;
+}
+/*other nav*/
+.otherNav {
+    background-color: #FFFFFF;
+    margin: 10px 0;
+}
+.otherNav a,.otherNav div {
+    padding: 14px;
+    font-size: 0.5em;
+    display: flex;
+}
+.otherNav a>:first-child,.otherNav div>:first-child {
+    color: #AAAEB3;
+    margin-right: 5px;
+}
+.otherNav a>:last-child,.otherNav div>:last-child {
+    color: black;
+}
