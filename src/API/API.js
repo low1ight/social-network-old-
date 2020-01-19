@@ -5,8 +5,6 @@ const instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
     headers: {"API-KEY": "72e25552-b2c1-4c84-899d-e7e03c72d53f"}
-    //72e25552-b2c1-4c84-899d-e7e03c72d53f main
-    //5eaa11d5-b7e1-4e20-b84b-6495867db236 smurf
 });
 
 export const usersAPI = {
@@ -56,9 +54,9 @@ export const dialogsAPI = {
     getDialogs() {
         return instance.get('dialogs')
     },
-    "getCurrentDialogsMessage"(id) {
-        return instance.get(`dialogs/${id}/messages/new?newerThen=2019-12-15`).then(response => response.data)
-        // return instance.get(`dialogs/${id}/messages/new?newerThen=2019-12`)
+    getCurrentDialogsMessage(id) {
+        return instance.get(`dialogs/${id}/messages/new?newerThen=2020-01`).then(response => response.data)
+
 
     },
     sendMessage(id,messages) {

@@ -5,19 +5,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {Provider} from "react-redux";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import { ConnectedRouter } from 'connected-react-router'
 import {history} from "./redux/redux-store";
 
 let rerenderAllState = () => {
     ReactDOM.render(
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <ConnectedRouter history={history}>
                 <App/>
                 </ConnectedRouter>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
         , document.getElementById('root'));
 };
 
