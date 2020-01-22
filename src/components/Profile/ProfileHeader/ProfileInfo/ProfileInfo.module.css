@@ -111,10 +111,11 @@
         grid-template-columns: 80px 1fr;
     }
     .wrapper {
-        width: 95%;
+        width: 90%;
     }
     .info  {
         padding-top: 0.7em;
+        width: 100vw;
         height: max-content;
     }
     .mainData > :first-child > img {
