@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can try my project in GitHub Pages - https://low1ight.github.io/social-network/#/
+
+Email: secrofeasy@gmail.com
+
+Password: 1qwe1qwe
+
 ## Available Scripts
 
 In the project directory, you can run:
