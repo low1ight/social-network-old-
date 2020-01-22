@@ -6,23 +6,20 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import {Provider} from "react-redux";
 import {HashRouter} from "react-router-dom";
-import { ConnectedRouter } from 'connected-react-router'
+import {ConnectedRouter} from 'connected-react-router'
 import {history} from "./redux/redux-store";
 
-let rerenderAllState = () => {
-    ReactDOM.render(
-        <HashRouter>
-            <Provider store={store}>
-                <ConnectedRouter history={history}>
+
+ReactDOM.render(
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <HashRouter>
                 <App/>
-                </ConnectedRouter>
-            </Provider>
-        </HashRouter>
-        , document.getElementById('root'));
-};
+            </HashRouter>
+        </ConnectedRouter>
+    </Provider>
 
-rerenderAllState();
+    , document.getElementById('root'));
 
-store.subscribe(rerenderAllState);
 
 serviceWorker.unregister();

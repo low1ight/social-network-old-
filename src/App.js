@@ -16,6 +16,7 @@ import './assets/commonStyles/commonStyles.css'
 import cn from 'classnames'
 import DialogsPage from "./components/DialogsPage/DialogsPage";
 
+
 class App extends React.Component {
     componentDidMount() {
         this.props.initializedSuccess()
@@ -26,26 +27,23 @@ class App extends React.Component {
         if (!this.props.initializedState) return <LoadingSpinner/>;
 
         return (
+
+
             <div className="app-wrapper">
                 <HeaderContainer/>
                 <div className='content'>
-                    <div className={cn('container','content-wrapper')}>
-                        <Switch>
-                            <Route path='/login'/>
-                            <Route path='' render={() => <Navbar/>}/>
-                        </Switch>
-                        <Page/>
-                    </div>
+                        <div className={cn('container', 'content-wrapper')}>
+                            <Switch>
+                                <Route path='/login'/>
+                                <Route path='' render={() => <Navbar/>}/>
+                            </Switch>
+                            <Page/>
+                        </div>
                 </div>
             </div>
-
         );
     }
 }
-
-
-
-
 
 
 function Page() {
@@ -64,8 +62,6 @@ function Page() {
 }
 
 
-
-
 let mapStateToProps = (state) => {
     return {
         initializedState: state.app.initializedState
@@ -74,4 +70,4 @@ let mapStateToProps = (state) => {
 
 export default compose(
     withRouter,
-    connect(mapStateToProps, {initializedSuccess}) )(App)
+    connect(mapStateToProps, {initializedSuccess}))(App)
