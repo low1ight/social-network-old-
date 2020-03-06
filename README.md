@@ -2,8 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Login data
 
-You can try my project in GitHub Pages - https://low1ight.github.io/social-network/#/
-
 Email: secrofeasy@gmail.com
 
 Password: 1qwe1qwe
